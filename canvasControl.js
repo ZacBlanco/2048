@@ -4,6 +4,11 @@ canvas_Element.width = canvas_Element.parentNode.clientWidth;
 canvas_Element.height = window.innerHeight - 200;
 var ctx = canvas_Element.getContext("2d");
 var AIBox = document.getElementById("useAI");
+var fps = document.getElementById("fpsInput");
+fps.oninput = function(){
+	g = new game(gameLoop, parseInt(fps.value));
+	g.play();
+}
 
 ctx.fillStyle = "#F0F0F0";
 ctx.strokeStyle = "#FFF000";
@@ -13,8 +18,7 @@ var beginFrame
 var endFrame = new Date().getTime();
 
 
-var g = new game(gameLoop, 50);
-
+var g = new game(gameLoop, parseInt(fps.value));
 g.play();
 
 
