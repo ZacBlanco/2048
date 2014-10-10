@@ -1,0 +1,73 @@
+ul{
+	list-style-type:none;
+	margin:0;
+	padding:0;
+}
+ul > li{
+	display:block;
+	text-align:center;
+	margin:10px;
+	padding:5px;
+	border-style:solid;
+	border-width:1px;
+	border-color=white;
+}
+
+ul > li > input{
+	margin:15px;
+	padding:5px;
+	text-align:center;
+	border-style:solid;
+}
+input[type=checkbox]{
+	/*normal browsers*/
+	transform: scale(1.5);
+
+  /* Webkit browsers*/
+  -webkit-transform: scale(1.5);
+}
+
+ul > li > input[type=button]{
+	display:block;
+	width:75%;
+}
+
+#options{
+	overflow:hidden;
+	float:left;
+	width: 15%;
+	height:100%;
+	vertical-align:middle; 
+	background:gray;
+	text-align:center;
+}
+
+#contContainer{
+	text-align:center;
+	float:left;
+	width:80%;
+	overflow:hidden;
+}
+
+#canvasContainer{
+	width: 70%;
+	height:95%;
+	margin:auto;
+	overflow:hidden;
+	background:Khaki
+}
+
+nav.vertical{
+	border-radius: 4px;
+	box-shadow: 0 0 10px rgba(0,0,0,.15);
+}
+
+canvas{
+	display:block;
+	margin:auto; 
+	padding:25px
+}
+
+body{
+	background:darkslategray;
+}

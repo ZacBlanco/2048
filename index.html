@@ -1,6 +1,7 @@
 <DOCTYPE html>
 <html>
 	<head>
+		<link rel="stylesheet" type="text/css" href="style/zStyle.css">
 		<script type="text/javascript" src="ballSim.js"></script>
 		<script type="text/javascript" src="libs/jquery-2.1.1.js"></script>
 		<script type="text/javascript" src="libs/matrix.js"></script>
@@ -8,16 +9,21 @@
 	<title>
 		Machine Learning
 	</title>
-	<body style="background:darkslategray">
-		<div id="canvasContainer" style="text-align:center">
-		<input id="useAI" type="checkbox">
-			Play using AI?
-		</input>
-		<input type="button" value="Play"onclick="g.pause(); g.play()"></input>
-		<input type="button" value="Pause" onclick="g.pause();"></input>
-			<div style="width: 70%;height:95%;margin:auto; overflow:hidden; background:Khaki">
+	<body>
+		<div id="options">
+		<nav class="vertical">
+			<ul>
+				<li><input id="useAI" type="checkbox">Play using AI?</input></li>
+				<li><input type="button" value="Play"onclick="g.pause(); g.play()"></input></li>
+				<li><input type="button" value="Pause" onclick="g.pause();"></input></li>
+			</ul>
+		</div>
+		</nav>
+		<div id="contContainer">
+		
+			<div id="canvasContainer">
 				
-				<canvas id="square" style="display:block; margin:auto; padding:25px">
+				<canvas id="square">
 				Please Download a web browser that supports HTML5 canvas attribute.
 				</canvas>
 			</div>
