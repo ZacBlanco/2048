@@ -1,7 +1,19 @@
 var canvas_Element = document.getElementById("square")
 
-canvas_Element.width = canvas_Element.parentNode.clientWidth;
-canvas_Element.height = window.innerHeight - 200;
+setCanvasSize();
+
+function setCanvasSize(){
+	canvas_Element.width = canvas_Element.parentNode.clientWidth;
+	canvas_Element.height = window.innerHeight - 200;
+	
+	if(canvas_Element.width < canvas_Element.height){
+		canvas_Element.height = canvas_Element.width;
+	}else if(canvas_Element.height < canvas_Element.width){
+		canvas_Element.width = canvas_Element.height;
+	}
+	
+}
+
 var ctx = canvas_Element.getContext("2d");
 var AIBox = document.getElementById("useAI");
 
@@ -87,6 +99,12 @@ function AI() {
         this.power = power;
     }
 
+	function hasMoves(){
+		for(var i = 0; i < 4; i++){
+			
+		}
+	}
+	
     function copyTileMap(newTiles) {
         var xLength = newTiles.length;
         var yLength = newTiles.length;
@@ -245,8 +263,8 @@ function Board(x, y, base) {
 
     function getTileWidthHeight(bx, by, x, y) {
         var minVal;
-        var tempWidth = (canvas_Element.width - bx) / x;
-        var tempHeight = (canvas_Element.height - by) / y;
+        var tempWidth = (canvas_Element.width ) / x;
+        var tempHeight = (canvas_Element.height) / y;
 
         if (tempHeight <= tempWidth) {
             minVal = tempHeight;
