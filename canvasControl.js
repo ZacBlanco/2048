@@ -4,7 +4,7 @@ setCanvasSize();
 
 function setCanvasSize(){
 	canvas_Element.width = canvas_Element.parentNode.clientWidth;
-	canvas_Element.height = window.innerHeight - 200;
+	canvas_Element.height = canvas_Element.parentNode.clientHeight - 50;
 	
 	if(canvas_Element.width < canvas_Element.height){
 		canvas_Element.height = canvas_Element.width;
