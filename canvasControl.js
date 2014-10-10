@@ -3,7 +3,7 @@ var canvas_Element = document.getElementById("square")
 setCanvasSize();
 
 function setCanvasSize(){
-	canvas_Element.width = canvas_Element.parentNode.clientWidth;
+	canvas_Element.width = canvas_Element.parentNode.clientWidth - 50;
 	canvas_Element.height = canvas_Element.parentNode.clientHeight - 50;
 	
 	if(canvas_Element.width < canvas_Element.height){
